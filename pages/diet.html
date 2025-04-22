@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饮食管理</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .diet-card {
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nutrition-bar {
+            height: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-4">
+    <!-- 今日营养摄入 -->
+    <div class="diet-card bg-white p-4 mb-6">
+        <h2 class="text-lg font-bold mb-4">今日营养摄入</h2>
+        <div class="space-y-4">
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-sm">蛋白质</span>
+                    <span class="text-sm font-bold">45/60g</span>
+                </div>
+                <div class="nutrition-bar bg-blue-100">
+                    <div class="nutrition-bar bg-blue-500" style="width: 75%"></div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-sm">碳水化合物</span>
+                    <span class="text-sm font-bold">120/200g</span>
+                </div>
+                <div class="nutrition-bar bg-green-100">
+                    <div class="nutrition-bar bg-green-500" style="width: 60%"></div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-between mb-1">
+                    <span class="text-sm">脂肪</span>
+                    <span class="text-sm font-bold">30/50g</span>
+                </div>
+                <div class="nutrition-bar bg-yellow-100">
+                    <div class="nutrition-bar bg-yellow-500" style="width: 60%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 今日饮食记录 -->
+    <div class="diet-card bg-white p-4 mb-6">
+        <h2 class="text-lg font-bold mb-4">今日饮食记录</h2>
+        <div class="space-y-4">
+            <!-- 早餐 -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-medium">早餐</h3>
+                    <span class="text-sm text-gray-500">07:30</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-16 h-16 rounded-lg bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-bread-slice text-gray-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-medium">全麦面包 + 牛奶</p>
+                        <p class="text-sm text-gray-500">350千卡</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 午餐 -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-medium">午餐</h3>
+                    <span class="text-sm text-gray-500">12:15</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-16 h-16 rounded-lg bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-utensils text-gray-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-medium">鸡胸肉沙拉 + 糙米饭</p>
+                        <p class="text-sm text-gray-500">450千卡</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 晚餐 -->
+            <div>
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-medium">晚餐</h3>
+                    <span class="text-sm text-gray-500">18:45</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-16 h-16 rounded-lg bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-fish text-gray-500"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-medium">清蒸鱼 + 蔬菜</p>
+                        <p class="text-sm text-gray-500">380千卡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 饮食建议 -->
+    <div class="diet-card bg-white p-4">
+        <h2 class="text-lg font-bold mb-4">今日饮食建议</h2>
+        <div class="flex items-start">
+            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                <i class="fas fa-apple-alt text-green-500"></i>
+            </div>
+            <div>
+                <p class="font-medium">增加水果摄入</p>
+                <p class="text-sm text-gray-500">建议今天再吃一个苹果或香蕉</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加饮食按钮 -->
+    <div class="fixed bottom-24 right-4">
+        <button class="w-14 h-14 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg">
+            <i class="fas fa-plus text-xl"></i>
+        </button>
+    </div>
+</body>
+</html> 

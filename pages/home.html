@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康概览</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .health-card {
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-4">
+    <!-- 顶部用户信息 -->
+    <div class="flex justify-between items-center mb-6">
+        <div>
+            <h1 class="text-2xl font-bold">你好，小明</h1>
+            <p class="text-gray-500">今天感觉如何？</p>
+        </div>
+        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white">
+            <i class="fas fa-user text-xl"></i>
+        </div>
+    </div>
+
+    <!-- 健康数据卡片 -->
+    <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="health-card bg-white p-4">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-heart text-red-500"></i>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">心率</p>
+                    <p class="text-xl font-bold">72</p>
+                    <p class="text-green-500 text-xs">正常</p>
+                </div>
+            </div>
+        </div>
+        <div class="health-card bg-white p-4">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-walking text-blue-500"></i>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm">步数</p>
+                    <p class="text-xl font-bold">8,542</p>
+                    <p class="text-green-500 text-xs">目标: 10,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 运动目标进度 -->
+    <div class="health-card bg-white p-4 mb-6">
+        <h2 class="text-lg font-bold mb-4">本周运动目标</h2>
+        <div class="flex justify-between items-center">
+            <div class="relative w-24 h-24">
+                <svg class="progress-ring w-24 h-24">
+                    <circle class="progress-ring__circle stroke-gray-200" stroke-width="8" fill="transparent" r="40" cx="48" cy="48"/>
+                    <circle class="progress-ring__circle stroke-blue-500" stroke-width="8" fill="transparent" r="40" cx="48" cy="48" stroke-dasharray="251.2" stroke-dashoffset="75.36"/>
+                </svg>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                    <p class="text-2xl font-bold">70%</p>
+                    <p class="text-xs text-gray-500">完成度</p>
+                </div>
+            </div>
+            <div class="flex-1 ml-6">
+                <div class="mb-2">
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm">运动时长</span>
+                        <span class="text-sm font-bold">3.5/5小时</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-1">
+                        <span class="text-sm">卡路里</span>
+                        <span class="text-sm font-bold">1,400/2,000千卡</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 健康建议 -->
+    <div class="health-card bg-white p-4">
+        <h2 class="text-lg font-bold mb-4">今日健康建议</h2>
+        <div class="flex items-start mb-4">
+            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                <i class="fas fa-sun text-yellow-500"></i>
+            </div>
+            <div>
+                <p class="font-medium">建议增加户外活动</p>
+                <p class="text-sm text-gray-500">今天阳光明媚，适合户外运动</p>
+            </div>
+        </div>
+        <div class="flex items-start">
+            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                <i class="fas fa-apple-alt text-green-500"></i>
+            </div>
+            <div>
+                <p class="font-medium">注意饮食均衡</p>
+                <p class="text-sm text-gray-500">建议增加蔬菜水果摄入</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

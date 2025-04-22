@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠监测</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .sleep-card {
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .sleep-stage {
+            height: 40px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-4">
+    <!-- 睡眠概览 -->
+    <div class="sleep-card bg-white p-4 mb-6">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lg font-bold">昨晚睡眠</h2>
+            <span class="text-sm text-gray-500">2024-03-20</span>
+        </div>
+        <div class="grid grid-cols-3 gap-4 text-center mb-4">
+            <div>
+                <p class="text-2xl font-bold">7.5小时</p>
+                <p class="text-sm text-gray-500">睡眠时长</p>
+            </div>
+            <div>
+                <p class="text-2xl font-bold">92%</p>
+                <p class="text-sm text-gray-500">睡眠质量</p>
+            </div>
+            <div>
+                <p class="text-2xl font-bold">23:30</p>
+                <p class="text-sm text-gray-500">入睡时间</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 睡眠阶段 -->
+    <div class="sleep-card bg-white p-4 mb-6">
+        <h2 class="text-lg font-bold mb-4">睡眠阶段</h2>
+        <div class="space-y-2">
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">23:30</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-100"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">00:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-200"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">01:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-300"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">02:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-400"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">03:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-500"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">04:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-600"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">05:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-700"></div>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <div class="w-16 text-sm text-gray-500">06:00</div>
+                <div class="flex-1">
+                    <div class="sleep-stage bg-blue-800"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 睡眠建议 -->
+    <div class="sleep-card bg-white p-4">
+        <h2 class="text-lg font-bold mb-4">睡眠建议</h2>
+        <div class="space-y-4">
+            <div class="flex items-start">
+                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-moon text-purple-500"></i>
+                </div>
+                <div>
+                    <p class="font-medium">保持规律作息</p>
+                    <p class="text-sm text-gray-500">建议每天在23:00前入睡</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                    <i class="fas fa-coffee text-yellow-500"></i>
+                </div>
+                <div>
+                    <p class="font-medium">减少咖啡因摄入</p>
+                    <p class="text-sm text-gray-500">下午3点后避免饮用咖啡</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加睡眠记录按钮 -->
+    <div class="fixed bottom-24 right-4">
+        <button class="w-14 h-14 rounded-full bg-blue-500 text-white flex items-center justify-center shadow-lg">
+            <i class="fas fa-plus text-xl"></i>
+        </button>
+    </div>
+</body>
+</html> 
