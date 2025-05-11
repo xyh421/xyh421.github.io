@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Neo Xu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Neo Xu</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="projects.html" class="hover:text-blue-600">Projects</a>
+        <a href="blog.html" class="text-blue-600">Blog</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-blue-100 py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Blog</h2>
+    <p class="text-lg mb-4">Insights on Test Automation, Quality Assurance, and Software Testing</p>
+  </section>
+
+  <main class="max-w-4xl mx-auto p-6 space-y-16">
+    <section id="featured-posts">
+      <h3 class="text-2xl font-semibold mb-6">Featured Posts</h3>
+      <div class="space-y-8">
+        <article class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+            <i class="far fa-calendar"></i>
+            <span>March 15, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="far fa-clock"></i>
+            <span>8 min read</span>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">Building a Scalable Test Automation Framework</h4>
+          <p class="text-gray-600 mb-4">
+            Learn how to design and implement a robust test automation framework that can scale with your organization's needs. This comprehensive guide covers best practices, architecture decisions, and implementation strategies.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Test Automation</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Framework Design</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Best Practices</span>
+          </div>
+          <a href="#" class="text-blue-600 hover:text-blue-800">Read More →</a>
+        </article>
+
+        <article class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+            <i class="far fa-calendar"></i>
+            <span>February 28, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="far fa-clock"></i>
+            <span>6 min read</span>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">Performance Testing in the Cloud Era</h4>
+          <p class="text-gray-600 mb-4">
+            Explore modern approaches to performance testing in cloud environments. Discover how to leverage cloud resources for distributed load testing and real-time performance monitoring.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Performance Testing</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Cloud Computing</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Load Testing</span>
+          </div>
+          <a href="#" class="text-blue-600 hover:text-blue-800">Read More →</a>
+        </article>
+
+        <article class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-2 text-sm text-gray-500 mb-4">
+            <i class="far fa-calendar"></i>
+            <span>February 10, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="far fa-clock"></i>
+            <span>5 min read</span>
+          </div>
+          <h4 class="text-xl font-semibold mb-4">Effective Test Management Strategies</h4>
+          <p class="text-gray-600 mb-4">
+            Discover proven strategies for managing test teams and processes effectively. Learn how to balance automation and manual testing, optimize test coverage, and improve team productivity.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Test Management</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Team Leadership</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Process Improvement</span>
+          </div>
+          <a href="#" class="text-blue-600 hover:text-blue-800">Read More →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="categories">
+      <h3 class="text-2xl font-semibold mb-6">Categories</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-blue-600 text-2xl mb-4">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h4 class="font-semibold mb-2">Test Automation</h4>
+          <p class="text-gray-600 text-sm">Frameworks, tools, and best practices</p>
+        </a>
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-blue-600 text-2xl mb-4">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h4 class="font-semibold mb-2">Performance Testing</h4>
+          <p class="text-gray-600 text-sm">Load testing and optimization</p>
+        </a>
+        <a href="#" class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <div class="text-blue-600 text-2xl mb-4">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4 class="font-semibold mb-2">Team Management</h4>
+          <p class="text-gray-600 text-sm">Leadership and process improvement</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="bg-blue-50 p-8 rounded-lg text-center">
+        <h3 class="text-2xl font-semibold mb-4">Stay Updated</h3>
+        <p class="text-gray-600 mb-6">Subscribe to receive the latest articles and insights</p>
+        <form class="max-w-md mx-auto">
+          <div class="flex gap-4">
+            <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500">
+            <button type="submit" class="px-6 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center p-4 text-sm text-gray-500 border-t">
+    © 2025 Neo Xu. All rights reserved.
+  </footer>
+</body>
+
+</html> 

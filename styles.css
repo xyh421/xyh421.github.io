@@ -1,0 +1,69 @@
+/* 基础样式 */
+body {
+    font-family: 'Noto Sans SC', 'Inter', sans-serif;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 链接过渡效果 */
+a {
+    transition: all 0.3s ease;
+}
+
+/* 卡片悬停效果 */
+.group {
+    transition: transform 0.3s ease;
+}
+
+.group:hover {
+    transform: translateY(-5px);
+}
+
+/* 暗色模式切换动画 */
+.dark {
+    transition: background-color 0.3s ease;
+}
+
+/* 响应式导航栏 */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 页面加载动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.5s ease-out;
+} 
