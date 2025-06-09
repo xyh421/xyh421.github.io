@@ -10,62 +10,74 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="language.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Neo Xu</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="text-blue-600">Home</a>
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="blog.html" class="hover:text-blue-600">Blog</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 text-sm">
+          <a href="index.html" class="text-blue-600" data-translate="home">Home</a>
+          <a href="about.html" class="hover:text-blue-600" data-translate="about">About</a>
+          <a href="projects.html" class="hover:text-blue-600" data-translate="projects">Projects</a>
+          <a href="blog.html" class="hover:text-blue-600" data-translate="blog">Blog</a>
+          <a href="contact.html" class="hover:text-blue-600" data-translate="contact">Contact</a>
+        </nav>
+        <div class="relative group">
+          <button onclick="toggleLanguage()" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors">
+            <span class="lang-text">EN</span>
+          </button>
+          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <span class="tooltip-text">Switch to Chinese</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="bg-blue-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Hello, I'm <span class="text-blue-700">Neo Xu</span></h2>
-    <p class="text-lg mb-4">Senior QA Engineer with 10+ Years of Experience in Enterprise Software & WMS Systems</p>
-    <p class="mb-6">Hoofddorp, Netherlands | Open to EU Opportunities</p>
-    <a href="contact.html" class="inline-block px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Contact Me</a>
+    <h2 class="text-4xl font-bold mb-4"><span data-translate="hello">Hello, I'm</span> <span class="text-blue-700">Neo Xu</span></h2>
+    <p class="text-lg mb-4" data-translate="subtitle">Senior QA Engineer with 10+ Years of Experience in Enterprise Software & WMS Systems</p>
+    <p class="mb-6" data-translate="location">Hoofddorp, Netherlands | Open to EU Opportunities</p>
+    <a href="contact.html" class="inline-block px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="contactMe">Contact Me</a>
   </section>
 
   <main class="max-w-4xl mx-auto p-6 space-y-16">
     <section id="highlights">
-      <h3 class="text-2xl font-semibold mb-4">Professional Highlights</h3>
+      <h3 class="text-2xl font-semibold mb-4" data-translate="professionalHighlights">Professional Highlights</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <div class="text-blue-600 text-2xl mb-4">
             <i class="fas fa-robot"></i>
           </div>
-          <h4 class="font-semibold mb-2">Test Automation</h4>
-          <p class="text-gray-600">Built comprehensive test automation frameworks for WMS and ERP systems</p>
+          <h4 class="font-semibold mb-2" data-translate="testAutomation">Test Automation</h4>
+          <p class="text-gray-600" data-translate="testAutomationDesc">Built comprehensive test automation frameworks for WMS and ERP systems</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <div class="text-blue-600 text-2xl mb-4">
             <i class="fas fa-users"></i>
           </div>
-          <h4 class="font-semibold mb-2">Team Leadership</h4>
-          <p class="text-gray-600">Led QA teams across multiple regions and projects</p>
+          <h4 class="font-semibold mb-2" data-translate="teamLeadership">Team Leadership</h4>
+          <p class="text-gray-600" data-translate="teamLeadershipDesc">Led QA teams across multiple regions and projects</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <div class="text-blue-600 text-2xl mb-4">
             <i class="fas fa-chart-line"></i>
           </div>
-          <h4 class="font-semibold mb-2">Process Optimization</h4>
-          <p class="text-gray-600">Improved testing efficiency by 70% through automation</p>
+          <h4 class="font-semibold mb-2" data-translate="processOptimization">Process Optimization</h4>
+          <p class="text-gray-600" data-translate="processOptimizationDesc">Improved testing efficiency by 70% through automation</p>
         </div>
       </div>
     </section>
 
     <section id="expertise">
-      <h3 class="text-2xl font-semibold mb-4">Areas of Expertise</h3>
+      <h3 class="text-2xl font-semibold mb-4" data-translate="areasOfExpertise">Areas of Expertise</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h4 class="font-semibold mb-4">Technical Skills</h4>
+          <h4 class="font-semibold mb-4" data-translate="technicalSkills">Technical Skills</h4>
           <ul class="space-y-2 text-gray-600">
             <li>• Python, Java, SQL, Shell Scripting</li>
             <li>• Selenium, Postman, Pytest</li>
@@ -74,7 +86,7 @@
           </ul>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h4 class="font-semibold mb-4">Professional Skills</h4>
+          <h4 class="font-semibold mb-4" data-translate="professionalSkills">Professional Skills</h4>
           <ul class="space-y-2 text-gray-600">
             <li>• Test Strategy & Planning</li>
             <li>• Team Management & Mentoring</li>
@@ -111,16 +123,36 @@
 
     <section id="cta">
       <div class="bg-blue-50 p-8 rounded-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Let's Work Together</h3>
-        <p class="text-gray-600 mb-6">Looking for a senior QA engineer for your next project?</p>
-        <a href="contact.html" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Get in Touch</a>
+        <h3 class="text-2xl font-semibold mb-4" data-translate="letsWorkTogether">Let's Work Together</h3>
+        <p class="text-gray-600 mb-6" data-translate="lookingForQA">Looking for a senior QA engineer for your next project?</p>
+        <a href="contact.html" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="getInTouch">Get in Touch</a>
       </div>
     </section>
   </main>
 
   <footer class="bg-white text-center p-4 text-sm text-gray-500 border-t">
-    © 2025 Neo Xu. All rights reserved.
+    © 2025 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span>
   </footer>
+
+  <script>
+    // 更新语言切换按钮文本
+    function updateLanguageButton() {
+      const button = document.querySelector('.lang-text');
+      button.textContent = currentLang.toUpperCase();
+    }
+    
+    // 在语言切换时更新按钮文本
+    const originalToggleLanguage = toggleLanguage;
+    toggleLanguage = function() {
+      originalToggleLanguage();
+      updateLanguageButton();
+    }
+    
+    // 初始化按钮文本
+    document.addEventListener('DOMContentLoaded', () => {
+      updateLanguageButton();
+    });
+  </script>
 </body>
 
 </html> 

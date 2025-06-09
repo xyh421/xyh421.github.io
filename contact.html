@@ -10,93 +10,104 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="language.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Neo Xu</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-blue-600">Home</a>
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="blog.html" class="hover:text-blue-600">Blog</a>
-        <a href="contact.html" class="text-blue-600">Contact</a>
-      </nav>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-blue-600" data-translate="home">Home</a>
+          <a href="about.html" class="hover:text-blue-600" data-translate="about">About</a>
+          <a href="projects.html" class="hover:text-blue-600" data-translate="projects">Projects</a>
+          <a href="blog.html" class="hover:text-blue-600" data-translate="blog">Blog</a>
+          <a href="contact.html" class="text-blue-600" data-translate="contact">Contact</a>
+        </nav>
+        <div class="relative group">
+          <button onclick="toggleLanguage()" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors">
+            <span class="lang-text">EN</span>
+          </button>
+          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <span class="tooltip-text">Switch to Chinese</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="bg-blue-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-    <p class="text-lg mb-4">Let's discuss how I can help with your testing needs</p>
+    <h2 class="text-4xl font-bold mb-4" data-translate="contact">Contact</h2>
+    <p class="text-lg mb-4" data-translate="getInTouch">Get in Touch</p>
   </section>
 
   <main class="max-w-4xl mx-auto p-6 space-y-16">
+    <section id="contact-form">
+      <div class="bg-white p-8 rounded-lg shadow-sm">
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2" data-translate="name">Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2" data-translate="email">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2" data-translate="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2" data-translate="message">Message</label>
+            <textarea id="message" name="message" rows="6" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required></textarea>
+          </div>
+          <button type="submit" class="w-full px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="sendMessage">Send Message</button>
+        </form>
+      </div>
+    </section>
+
     <section id="contact-info">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-lg shadow-sm text-center">
           <div class="text-blue-600 text-2xl mb-4">
             <i class="fas fa-envelope"></i>
           </div>
-          <h4 class="font-semibold mb-2">Email</h4>
-          <p class="text-gray-600">xyh421@gmail.com</p>
+          <h3 class="font-semibold mb-2" data-translate="email">Email</h3>
+          <p class="text-gray-600">neo.xu@example.com</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="text-blue-600 text-2xl mb-4">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 class="font-semibold mb-2" data-translate="phone">Phone</h3>
+          <p class="text-gray-600">+31 6 12345678</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-sm text-center">
           <div class="text-blue-600 text-2xl mb-4">
             <i class="fas fa-map-marker-alt"></i>
           </div>
-          <h4 class="font-semibold mb-2">Location</h4>
-          <p class="text-gray-600">Amsterdam, Netherlands</p>
+          <h3 class="font-semibold mb-2" data-translate="location">Location</h3>
+          <p class="text-gray-600" data-translate="location">Hoofddorp, Netherlands</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
-          <div class="text-blue-600 text-2xl mb-4">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h4 class="font-semibold mb-2">Availability</h4>
-          <p class="text-gray-600">Open to EU Opportunities</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact-form">
-      <div class="bg-white p-8 rounded-lg shadow-sm">
-        <h3 class="text-2xl font-semibold mb-6">Send a Message</h3>
-        <form class="space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-              <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500">
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500">
-            </div>
-          </div>
-          <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-            <textarea id="message" name="message" rows="6" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500"></textarea>
-          </div>
-          <button type="submit" class="w-full px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Send Message</button>
-        </form>
       </div>
     </section>
 
     <section id="social-links">
       <div class="bg-white p-8 rounded-lg shadow-sm text-center">
-        <h3 class="text-2xl font-semibold mb-6">Connect with Me</h3>
+        <h3 class="text-2xl font-semibold mb-6" data-translate="connectWithMe">Connect with Me</h3>
         <div class="flex justify-center space-x-6">
-          <a href="#" class="text-gray-600 hover:text-blue-600">
-            <i class="fab fa-linkedin text-2xl"></i>
+          <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl">
+            <i class="fab fa-linkedin"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-blue-600">
-            <i class="fab fa-github text-2xl"></i>
+          <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl">
+            <i class="fab fa-github"></i>
           </a>
-          <a href="#" class="text-gray-600 hover:text-blue-600">
-            <i class="fab fa-twitter text-2xl"></i>
+          <a href="#" class="text-gray-600 hover:text-blue-600 text-2xl">
+            <i class="fab fa-twitter"></i>
           </a>
         </div>
       </div>
@@ -104,8 +115,28 @@
   </main>
 
   <footer class="bg-white text-center p-4 text-sm text-gray-500 border-t">
-    © 2025 Neo Xu. All rights reserved.
+    © 2025 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span>
   </footer>
+
+  <script>
+    // 更新语言切换按钮文本
+    function updateLanguageButton() {
+      const button = document.querySelector('.lang-text');
+      button.textContent = currentLang.toUpperCase();
+    }
+    
+    // 在语言切换时更新按钮文本
+    const originalToggleLanguage = toggleLanguage;
+    toggleLanguage = function() {
+      originalToggleLanguage();
+      updateLanguageButton();
+    }
+    
+    // 初始化按钮文本
+    document.addEventListener('DOMContentLoaded', () => {
+      updateLanguageButton();
+    });
+  </script>
 </body>
 
 </html> 

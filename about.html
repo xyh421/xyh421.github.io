@@ -10,33 +10,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="language.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Neo Xu</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-blue-600">Home</a>
-        <a href="about.html" class="text-blue-600">About</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="blog.html" class="hover:text-blue-600">Blog</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-blue-600" data-translate="home">Home</a>
+          <a href="about.html" class="text-blue-600" data-translate="about">About</a>
+          <a href="projects.html" class="hover:text-blue-600" data-translate="projects">Projects</a>
+          <a href="blog.html" class="hover:text-blue-600" data-translate="blog">Blog</a>
+          <a href="contact.html" class="hover:text-blue-600" data-translate="contact">Contact</a>
+        </nav>
+        <div class="relative group">
+          <button onclick="toggleLanguage()" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors">
+            <span class="lang-text">EN</span>
+          </button>
+          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <span class="tooltip-text">Switch to Chinese</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="bg-blue-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">About Me</h2>
-    <p class="text-lg mb-4">Senior QA Engineer with 10+ Years of Experience in Enterprise Software & WMS Systems</p>
-    <p class="mb-6">Hoofddorp, Netherlands | Open to EU Opportunities</p>
+    <h2 class="text-4xl font-bold mb-4" data-translate="aboutMe">About Me</h2>
+    <p class="text-lg mb-4" data-translate="subtitle">Senior QA Engineer with 10+ Years of Experience in Enterprise Software & WMS Systems</p>
+    <p class="mb-6" data-translate="location">Hoofddorp, Netherlands | Open to EU Opportunities</p>
   </section>
 
   <main class="max-w-4xl mx-auto p-6 space-y-16">
     <section id="professional-summary">
       <div class="bg-white p-8 rounded-lg shadow-sm">
-        <h3 class="text-2xl font-semibold mb-6">Professional Summary</h3>
-        <p class="text-gray-600 mb-4">
+        <h3 class="text-2xl font-semibold mb-6" data-translate="professionalSummary">Professional Summary</h3>
+        <p class="text-gray-600 mb-4" data-translate="professionalSummaryDesc">
           Senior QA Engineer with 10+ years of experience spanning enterprise software, WMS systems, and SAP integration. Proven track record in building reliable, automated testing frameworks that scale. Roles in fast-paced, project-based or startup environments have driven technical growth and domain expertise. Currently leading WMS QA efforts at HAIROU Innovation, focusing on smart logistics and robot-integrated warehousing.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
@@ -45,28 +57,28 @@
               <i class="fas fa-calendar-check"></i>
             </div>
             <p class="text-2xl font-bold">10+</p>
-            <p class="text-gray-600">Years Experience</p>
+            <p class="text-gray-600" data-translate="yearsExperience">Years Experience</p>
           </div>
           <div class="text-center">
             <div class="text-blue-600 text-2xl mb-2">
               <i class="fas fa-project-diagram"></i>
             </div>
             <p class="text-2xl font-bold">80%</p>
-            <p class="text-gray-600">Test Coverage</p>
+            <p class="text-gray-600" data-translate="testCoverage">Test Coverage</p>
           </div>
           <div class="text-center">
             <div class="text-blue-600 text-2xl mb-2">
               <i class="fas fa-users"></i>
             </div>
             <p class="text-2xl font-bold">10+</p>
-            <p class="text-gray-600">Team Members</p>
+            <p class="text-gray-600" data-translate="teamMembers">Team Members</p>
           </div>
           <div class="text-center">
             <div class="text-blue-600 text-2xl mb-2">
               <i class="fas fa-code-branch"></i>
             </div>
             <p class="text-2xl font-bold">60%</p>
-            <p class="text-gray-600">Efficiency Gain</p>
+            <p class="text-gray-600" data-translate="efficiencyGain">Efficiency Gain</p>
           </div>
         </div>
       </div>
@@ -101,7 +113,7 @@
     </section>
 
     <section id="experience">
-      <h3 class="text-2xl font-semibold mb-6">Work Experience</h3>
+      <h3 class="text-2xl font-semibold mb-6" data-translate="workExperience">Work Experience</h3>
       <div class="space-y-6">
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <div class="flex justify-between items-start mb-4">
@@ -109,7 +121,7 @@
               <h4 class="font-semibold">Senior QA Engineer</h4>
               <p class="text-gray-600">HAIROU Innovation | Shenzhen, China</p>
             </div>
-            <span class="text-sm text-gray-500">Apr 2024 - Present</span>
+            <span class="text-sm text-gray-500">Apr 2024 - <span data-translate="present">Present</span></span>
           </div>
           <ul class="list-disc list-inside text-gray-600 space-y-2">
             <li>Delivering quality for standardized WMS platforms used in smart warehouse robotics</li>
@@ -166,7 +178,7 @@
     </section>
 
     <section id="education">
-      <h3 class="text-2xl font-semibold mb-6">Education</h3>
+      <h3 class="text-2xl font-semibold mb-6" data-translate="education">Education</h3>
       <div class="bg-white p-6 rounded-lg shadow-sm">
         <div class="flex justify-between items-start">
           <div>
@@ -180,16 +192,36 @@
 
     <section id="cta">
       <div class="bg-blue-50 p-8 rounded-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4">Let's Work Together</h3>
-        <p class="text-gray-600 mb-6">Looking for a senior QA engineer for your next project?</p>
-        <a href="contact.html" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800">Get in Touch</a>
+        <h3 class="text-2xl font-semibold mb-4" data-translate="letsWorkTogether">Let's Work Together</h3>
+        <p class="text-gray-600 mb-6" data-translate="lookingForQA">Looking for a senior QA engineer for your next project?</p>
+        <a href="contact.html" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="getInTouch">Get in Touch</a>
       </div>
     </section>
   </main>
 
   <footer class="bg-white text-center p-4 text-sm text-gray-500 border-t">
-    © 2025 Neo Xu. All rights reserved.
+    © 2025 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span>
   </footer>
+
+  <script>
+    // 更新语言切换按钮文本
+    function updateLanguageButton() {
+      const button = document.querySelector('.lang-text');
+      button.textContent = currentLang.toUpperCase();
+    }
+    
+    // 在语言切换时更新按钮文本
+    const originalToggleLanguage = toggleLanguage;
+    toggleLanguage = function() {
+      originalToggleLanguage();
+      updateLanguageButton();
+    }
+    
+    // 初始化按钮文本
+    document.addEventListener('DOMContentLoaded', () => {
+      updateLanguageButton();
+    });
+  </script>
 </body>
 
 </html> 

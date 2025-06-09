@@ -10,128 +10,157 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js"></script>
+  <script src="language.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans">
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Neo Xu</h1>
-      <nav class="space-x-4 text-sm">
-        <a href="index.html" class="hover:text-blue-600">Home</a>
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="projects.html" class="text-blue-600">Projects</a>
-        <a href="blog.html" class="hover:text-blue-600">Blog</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
+      <div class="flex items-center space-x-4">
+        <nav class="space-x-4 text-sm">
+          <a href="index.html" class="hover:text-blue-600" data-translate="home">Home</a>
+          <a href="about.html" class="hover:text-blue-600" data-translate="about">About</a>
+          <a href="projects.html" class="text-blue-600" data-translate="projects">Projects</a>
+          <a href="blog.html" class="hover:text-blue-600" data-translate="blog">Blog</a>
+          <a href="contact.html" class="hover:text-blue-600" data-translate="contact">Contact</a>
+        </nav>
+        <div class="relative group">
+          <button onclick="toggleLanguage()" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors">
+            <span class="lang-text">EN</span>
+          </button>
+          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <span class="tooltip-text">Switch to Chinese</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="bg-blue-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Featured Projects</h2>
-    <p class="text-lg mb-4">Showcasing my work in test automation, WMS, and ERP systems</p>
+    <h2 class="text-4xl font-bold mb-4" data-translate="featuredProjects">Featured Projects</h2>
+    <p class="text-lg mb-4" data-translate="projectsSubtitle">Showcasing my work in test automation, WMS, and ERP systems</p>
   </section>
 
   <main class="max-w-4xl mx-auto p-6 space-y-16">
-    <section id="wms-automation">
-      <div class="bg-white p-8 rounded-lg shadow-sm">
-        <h3 class="text-2xl font-semibold mb-4">WMS Test Automation Framework</h3>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Selenium</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Jenkins</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Docker</span>
+    <section id="key-achievements">
+      <h3 class="text-2xl font-semibold mb-6" data-translate="keyAchievements">Key Achievements</h3>
+      <div class="space-y-8">
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-blue-600 text-2xl">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2" data-translate="developedFramework">Developed a comprehensive test automation framework for warehouse management systems</h4>
+              <p class="text-gray-600">
+                Built a scalable automation framework using Python and Robot Framework, achieving 80% test coverage and reducing regression testing time by 60%.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Robot Framework</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Jenkins</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Docker</span>
+          </div>
         </div>
-        <p class="text-gray-600 mb-6">
-          Developed a comprehensive test automation framework for warehouse management systems, covering inbound, outbound, and inventory management processes. The framework achieved 80% test coverage and reduced regression testing time by 70%.
-        </p>
-        <div class="space-y-4">
-          <h4 class="font-semibold">Key Achievements:</h4>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Implemented automated test suite for critical warehouse operations</li>
-            <li>Integrated with CI/CD pipeline for continuous testing</li>
-            <li>Reduced manual testing effort by 70%</li>
-            <li>Improved test coverage to 80%</li>
-          </ul>
+
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-blue-600 text-2xl">
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2" data-translate="ledQAEfforts">Led QA efforts for enterprise-wide SAP implementation</h4>
+              <p class="text-gray-600">
+                Managed end-to-end testing for a global retail SAP implementation, coordinating testing across 5 regions and ensuring successful go-live.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">SAP</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Test Management</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Global Delivery</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Retail</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-blue-600 text-2xl">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2" data-translate="builtPlatform">Built a scalable performance testing platform for high-traffic web applications</h4>
+              <p class="text-gray-600">
+                Developed a distributed performance testing platform using JMeter and Python, supporting 10,000+ concurrent users and real-time monitoring.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">JMeter</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Grafana</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Docker</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="text-blue-600 text-2xl">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2" data-translate="designedSystem">Designed and implemented a custom test management system</h4>
+              <p class="text-gray-600">
+                Created a comprehensive test management solution integrating test planning, execution, and reporting, improving team productivity by 40%.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Django</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">React</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">PostgreSQL</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="sap-implementation">
-      <div class="bg-white p-8 rounded-lg shadow-sm">
-        <h3 class="text-2xl font-semibold mb-4">SAP Global Rollout</h3>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">SAP</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Test Management</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Team Leadership</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">JIRA</span>
-        </div>
-        <p class="text-gray-600 mb-6">
-          Led QA efforts for enterprise-wide SAP implementation across multiple regions. Managed a team of 10 QA engineers and coordinated testing activities with development and business teams.
-        </p>
-        <div class="space-y-4">
-          <h4 class="font-semibold">Key Achievements:</h4>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Successfully delivered SAP implementation across 5 regions</li>
-            <li>Established standardized testing processes</li>
-            <li>Reduced critical defects by 60%</li>
-            <li>Improved team productivity by 40%</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="performance-testing">
-      <div class="bg-white p-8 rounded-lg shadow-sm">
-        <h3 class="text-2xl font-semibold mb-4">Performance Testing Platform</h3>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">JMeter</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Docker</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Grafana</span>
-        </div>
-        <p class="text-gray-600 mb-6">
-          Built a scalable performance testing platform for high-traffic web applications. The platform supports distributed load testing and real-time performance monitoring.
-        </p>
-        <div class="space-y-4">
-          <h4 class="font-semibold">Key Achievements:</h4>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Developed custom performance testing framework</li>
-            <li>Implemented real-time monitoring dashboard</li>
-            <li>Reduced performance testing time by 50%</li>
-            <li>Identified and resolved critical bottlenecks</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="test-management">
-      <div class="bg-white p-8 rounded-lg shadow-sm">
-        <h3 class="text-2xl font-semibold mb-4">Test Management System</h3>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Django</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">PostgreSQL</span>
-          <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Docker</span>
-        </div>
-        <p class="text-gray-600 mb-6">
-          Designed and implemented a custom test management system to streamline test planning, execution, and reporting processes. The system integrates with existing tools and provides comprehensive test metrics.
-        </p>
-        <div class="space-y-4">
-          <h4 class="font-semibold">Key Achievements:</h4>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Centralized test case management</li>
-            <li>Automated test reporting and metrics</li>
-            <li>Improved team collaboration</li>
-            <li>Reduced administrative overhead by 40%</li>
-          </ul>
-        </div>
+    <section id="cta">
+      <div class="bg-blue-50 p-8 rounded-lg text-center">
+        <h3 class="text-2xl font-semibold mb-4" data-translate="letsWorkTogether">Let's Work Together</h3>
+        <p class="text-gray-600 mb-6" data-translate="lookingForQA">Looking for a senior QA engineer for your next project?</p>
+        <a href="contact.html" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="getInTouch">Get in Touch</a>
       </div>
     </section>
   </main>
 
   <footer class="bg-white text-center p-4 text-sm text-gray-500 border-t">
-    © 2025 Neo Xu. All rights reserved.
+    © 2025 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span>
   </footer>
+
+  <script>
+    // 更新语言切换按钮文本
+    function updateLanguageButton() {
+      const button = document.querySelector('.lang-text');
+      button.textContent = currentLang.toUpperCase();
+    }
+    
+    // 在语言切换时更新按钮文本
+    const originalToggleLanguage = toggleLanguage;
+    toggleLanguage = function() {
+      originalToggleLanguage();
+      updateLanguageButton();
+    }
+    
+    // 初始化按钮文本
+    document.addEventListener('DOMContentLoaded', () => {
+      updateLanguageButton();
+    });
+  </script>
 </body>
 
 </html> 
