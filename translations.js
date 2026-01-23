@@ -58,7 +58,20 @@ const translations = {
         message: "Message",
         sendMessage: "Send Message",
         phone: "Phone",
-        connectWithMe: "Connect with Me"
+        connectWithMe: "Connect with Me",
+        heroAvailability: "Available for EU projects",
+        heroHello: "Hello, I am",
+        heroSubtitle: "Senior QA Engineer focused on warehouse automation, WMS/WES integration, and high-concurrency validation.",
+        heroLocation: "Netherlands / Europe Projects",
+        heroCta: "Contact me",
+        heroHighlights: "Highlights",
+        summaryTitle: "Professional Summary",
+        summarySubtitle: "Senior QA Engineer with 10+ years of experience in large-scale warehouse automation and enterprise systems.",
+        skillsTitle: "Core Skills",
+        experienceTitle: "Professional Experience",
+        educationTitle: "Education",
+        contactTitle: "Let's Work Together",
+        contactSubtitle: "Looking for a senior QA engineer for your next warehouse automation project?"
     },
     zh: {
         home: "首页",
@@ -119,6 +132,19 @@ const translations = {
         message: "消息",
         sendMessage: "发送消息",
         phone: "电话",
+        heroAvailability: "Available for EU projects",
+        heroHello: "Hello, I am",
+        heroSubtitle: "Senior QA Engineer focused on warehouse automation, WMS/WES integration, and high-concurrency validation.",
+        heroLocation: "Netherlands / Europe Projects",
+        heroCta: "Contact me",
+        heroHighlights: "Highlights",
+        summaryTitle: "Professional Summary",
+        summarySubtitle: "Senior QA Engineer with 10+ years of experience in large-scale warehouse automation and enterprise systems.",
+        skillsTitle: "Core Skills",
+        experienceTitle: "Professional Experience",
+        educationTitle: "Education",
+        contactTitle: "Let's Work Together",
+        contactSubtitle: "Looking for a senior QA engineer for your next warehouse automation project?",
         connectWithMe: "联系我"
     }
 }; 

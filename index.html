@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,31 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neo Xu | Senior QA Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="styles.css">
   <script src="translations.js"></script>
   <script src="language.js"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Neo Xu</h1>
-      <div class="flex items-center space-x-4">
-        <nav class="space-x-4 text-sm">
-          <a href="index.html" class="text-blue-600" data-translate="home">Home</a>
-          <a href="about.html" class="hover:text-blue-600" data-translate="about">About</a>
-          <a href="projects.html" class="hover:text-blue-600" data-translate="projects">Projects</a>
-          <a href="blog.html" class="hover:text-blue-600" data-translate="blog">Blog</a>
-          <a href="contact.html" class="hover:text-blue-600" data-translate="contact">Contact</a>
+<body class="site-body">
+  <header class="site-header">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="logo-mark">NX</div>
+        <div>
+          <p class="text-lg font-semibold">Neo Xu</p>
+          <p class="text-sm text-slate-600">Senior QA Engineer / Integration Test Engineer</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <nav class="flex flex-wrap items-center gap-4 text-sm font-medium">
+          <a href="#summary" class="nav-link">Summary</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </nav>
         <div class="relative group">
-          <button onclick="toggleLanguage()" class="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors">
+          <button onclick="toggleLanguage()" class="lang-button">
             <span class="lang-text">EN</span>
           </button>
-          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          <div class="lang-tooltip">
             <span class="tooltip-text">Switch to Chinese</span>
           </div>
         </div>
@@ -38,121 +43,302 @@
     </div>
   </header>
 
-  <section class="bg-blue-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4"><span data-translate="hello">Hello, I'm</span> <span class="text-blue-700">Neo Xu</span></h2>
-    <p class="text-lg mb-4" data-translate="subtitle">Senior QA Engineer with 10+ Years of Experience in Enterprise Software & WMS Systems</p>
-    <p class="mb-6" data-translate="location">Hoofddorp, Netherlands | Open to EU Opportunities</p>
-    <a href="contact.html" class="inline-block px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="contactMe">Contact Me</a>
+  <section class="hero">
+    <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm">
+          <span class="pulse-dot"></span>
+          <span data-translate="heroAvailability">Available for EU projects</span>
+        </div>
+        <div>
+          <p class="hero-eyebrow" data-translate="heroHello">Hello, I am</p>
+          <h1 class="hero-title">Neo Xu</h1>
+          <p class="hero-subtitle" data-translate="heroSubtitle">Senior QA Engineer focused on warehouse automation, WMS/WES integration, and high-concurrency validation.</p>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-chip">
+            <i class="fa-solid fa-location-dot"></i>
+            <span data-translate="heroLocation">Netherlands / Europe Projects</span>
+          </div>
+          <div class="meta-chip">
+            <i class="fa-solid fa-envelope"></i>
+            <span>xyh421@gmail.com</span>
+          </div>
+          <a class="meta-chip" href="https://www.linkedin.com/in/neo-xu-927607a0/" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="primary-button" data-translate="heroCta">Contact me</a>
+          <a href="#experience" class="secondary-button">View experience</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h2 class="card-title" data-translate="heroHighlights">Highlights</h2>
+        <div class="grid grid-cols-1 gap-4">
+          <div class="stat-card">
+            <p class="stat-value">10+ years</p>
+            <p class="stat-label">QA, integration, and automation testing</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-value">200-1,800+</p>
+            <p class="stat-label">Robot fleets per site in mega-warehouses</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-value">80%+</p>
+            <p class="stat-label">Regression coverage with Python + CI/CD</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <main class="max-w-4xl mx-auto p-6 space-y-16">
-    <section id="highlights">
-      <h3 class="text-2xl font-semibold mb-4" data-translate="professionalHighlights">Professional Highlights</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <div class="text-blue-600 text-2xl mb-4">
-            <i class="fas fa-robot"></i>
+  <main class="max-w-5xl mx-auto px-6 pb-16 space-y-16">
+    <section id="summary" class="section-card">
+      <div class="section-header">
+        <h2 class="section-title" data-translate="summaryTitle">Professional Summary</h2>
+        <p class="section-subtitle" data-translate="summarySubtitle">Senior QA Engineer with 10+ years of experience in large-scale warehouse automation and enterprise systems.</p>
+      </div>
+      <p class="section-body">
+        Specialized in robot-dense environments and end-to-end WMS / WES / ESS integration across Europe. Strong in Python-based automation, CI/CD-driven testing, and system validation under high concurrency and peak operational loads. Known for aligning cross-site teams, triaging complex integration issues, and enabling stable go-lives for high-volume retail logistics.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div class="pill-card">
+          <i class="fa-solid fa-gear"></i>
+          <div>
+            <p class="pill-title">Integration depth</p>
+            <p class="pill-desc">WMS / WES / ESS, API consistency, robotics orchestration</p>
           </div>
-          <h4 class="font-semibold mb-2" data-translate="testAutomation">Test Automation</h4>
-          <p class="text-gray-600" data-translate="testAutomationDesc">Built comprehensive test automation frameworks for WMS and ERP systems</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <div class="text-blue-600 text-2xl mb-4">
-            <i class="fas fa-users"></i>
+        <div class="pill-card">
+          <i class="fa-solid fa-robot"></i>
+          <div>
+            <p class="pill-title">Robot scale</p>
+            <p class="pill-desc">Multi-zone, high-throughput, robot-dense mega sites</p>
           </div>
-          <h4 class="font-semibold mb-2" data-translate="teamLeadership">Team Leadership</h4>
-          <p class="text-gray-600" data-translate="teamLeadershipDesc">Led QA teams across multiple regions and projects</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <div class="text-blue-600 text-2xl mb-4">
-            <i class="fas fa-chart-line"></i>
+        <div class="pill-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <div>
+            <p class="pill-title">Operational readiness</p>
+            <p class="pill-desc">UAT, stress/volume testing, and go-live readiness</p>
           </div>
-          <h4 class="font-semibold mb-2" data-translate="processOptimization">Process Optimization</h4>
-          <p class="text-gray-600" data-translate="processOptimizationDesc">Improved testing efficiency by 70% through automation</p>
         </div>
       </div>
     </section>
 
-    <section id="expertise">
-      <h3 class="text-2xl font-semibold mb-4" data-translate="areasOfExpertise">Areas of Expertise</h3>
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title" data-translate="skillsTitle">Core Skills</h2>
+        <p class="section-subtitle">Focused on integration stability, automation, and scale.</p>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h4 class="font-semibold mb-4" data-translate="technicalSkills">Technical Skills</h4>
-          <ul class="space-y-2 text-gray-600">
-            <li>• Python, Java, SQL, Shell Scripting</li>
-            <li>• Selenium, Postman, Pytest</li>
-            <li>• Jenkins, Git, Docker</li>
-            <li>• SAP, Oracle, WMS Systems</li>
+        <div class="card">
+          <h3 class="card-title">Domain Expertise</h3>
+          <ul class="list-disc list-inside text-slate-700 space-y-2">
+            <li>Large-scale robotic fleet integration (200-1,800+ robots)</li>
+            <li>Complex warehouse system orchestration (WMS / WES / ESS)</li>
+            <li>High-concurrency task scheduling and exception handling</li>
+            <li>Integration, UAT, stress, and volume testing</li>
+            <li>Cross-system data consistency and reliability</li>
           </ul>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h4 class="font-semibold mb-4" data-translate="professionalSkills">Professional Skills</h4>
-          <ul class="space-y-2 text-gray-600">
-            <li>• Test Strategy & Planning</li>
-            <li>• Team Management & Mentoring</li>
-            <li>• Process Improvement</li>
-            <li>• Cross-functional Collaboration</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="recent-projects">
-      <h3 class="text-2xl font-semibold mb-4">Recent Projects</h3>
-      <div class="space-y-6">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h4 class="font-semibold mb-2">WMS Test Automation Framework</h4>
-          <p class="text-gray-600 mb-4">Developed a comprehensive test automation framework for warehouse management systems</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Selenium</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Jenkins</span>
+        <div class="card">
+          <h3 class="card-title">Tooling & Delivery</h3>
+          <div class="chip-grid">
+            <span class="chip">Python automation</span>
+            <span class="chip">CI/CD (Jenkins)</span>
+            <span class="chip">API testing</span>
+            <span class="chip">Test strategy</span>
+            <span class="chip">Agile delivery</span>
+            <span class="chip">Integration reporting</span>
           </div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h4 class="font-semibold mb-2">SAP Global Rollout</h4>
-          <p class="text-gray-600 mb-4">Led QA efforts for enterprise-wide SAP implementation</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">SAP</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Test Management</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Team Leadership</span>
+          <div class="mt-6">
+            <p class="text-sm uppercase tracking-wide text-slate-500">Signature strengths</p>
+            <p class="text-slate-700 mt-2">System validation under peak operational loads, go-live readiness, and cross-site QA alignment.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="cta">
-      <div class="bg-blue-50 p-8 rounded-lg text-center">
-        <h3 class="text-2xl font-semibold mb-4" data-translate="letsWorkTogether">Let's Work Together</h3>
-        <p class="text-gray-600 mb-6" data-translate="lookingForQA">Looking for a senior QA engineer for your next project?</p>
-        <a href="contact.html" class="px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800" data-translate="getInTouch">Get in Touch</a>
+    <section id="experience">
+      <div class="section-header">
+        <h2 class="section-title" data-translate="experienceTitle">Professional Experience</h2>
+        <p class="section-subtitle">Impact across warehouse automation, SAP logistics, and enterprise platforms.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">Senior QA Engineer / Integration Test Engineer</h3>
+              <span class="timeline-date">Mar 2025 - Present | Netherlands | Hybrid</span>
+            </div>
+            <p class="text-slate-600 mt-2">Europe Projects (Warehouse Automation)</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Led end-to-end integration testing for WMS / WES / ESS and robotic subsystems.</li>
+              <li>Supported robot fleets from ~200 to 1,800+ AMRs in robot-dense mega sites.</li>
+              <li>Delivered go-live support for high-volume retail logistics projects (NEWWAVE, COOLBLUE, LPP, SHEIN).</li>
+              <li>Executed UAT with production-scale orders and stress/volume testing for peak loads.</li>
+              <li>Performed on-site triage across robot control, task scheduling, and integration layers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">Senior QA Engineer | WMS Software Testing</h3>
+              <span class="timeline-date">Apr 2024 - Feb 2025 | Shenzhen, China | On-site</span>
+            </div>
+            <p class="text-slate-600 mt-2">Hai Robotics</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Delivered QA for standardized WMS platforms used in smart warehouse robotics.</li>
+              <li>Built CI automation pipelines using Python + Jenkins, achieving 80%+ regression coverage.</li>
+              <li>Validated inbound, outbound, replenishment, and robot integration flows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">QA Leader</h3>
+              <span class="timeline-date">Jul 2021 - Jun 2023 | Shanghai, China</span>
+            </div>
+            <p class="text-slate-600 mt-2">SAP-based Logistics & Finance Program</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Led QA strategy for global retail logistics and finance systems.</li>
+              <li>Designed automation frameworks and performance testing with Python and JMeter.</li>
+              <li>Managed a 10-person QA team and improved release quality across regions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">Head of QA</h3>
+              <span class="timeline-date">Nov 2019 - May 2021 | Shanghai, China</span>
+            </div>
+            <p class="text-slate-600 mt-2">Decentralized Cloud Infrastructure & Staking Platform</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Owned QA for cloud infrastructure, node deployment, and payment modules.</li>
+              <li>Built automation with Python + Jenkins and led UAT and test planning.</li>
+              <li>Delivered ETL/reporting to support product decisions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">Test Lead / Automation Engineer</h3>
+              <span class="timeline-date">Dec 2016 - Jul 2019 | Shanghai, China</span>
+            </div>
+            <p class="text-slate-600 mt-2">Shanghai Zhiwang Information Technology</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Managed QA for end-to-end consumer finance systems (ERP, credit, payment, collection).</li>
+              <li>Delivered UI and API automation with Robot Framework, improving efficiency by ~60%.</li>
+              <li>Introduced regression pipelines across multiple business lines.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">Software Test Engineer</h3>
+              <span class="timeline-date">Nov 2014 - Dec 2016 | Shanghai, China</span>
+            </div>
+            <p class="text-slate-600 mt-2">Visa Modules (Web & Mobile)</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Tested web and mobile modules with cross-browser and backend validation.</li>
+              <li>Built mobile automation with Appium, reducing manual regression by ~50%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="card">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="card-title">Test Developer / QA</h3>
+              <span class="timeline-date">Jul 2011 - Nov 2014 | China</span>
+            </div>
+            <p class="text-slate-600 mt-2">Android OS Testing (Intel-based Tablets)</p>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
+              <li>Built Python + UIAutomator frameworks for system-level and HAL testing.</li>
+              <li>Executed stability, performance, and compatibility validation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-header">
+        <h2 class="section-title" data-translate="educationTitle">Education</h2>
+        <p class="section-subtitle">Bachelor of Computer Science (Network Engineering)</p>
+      </div>
+      <div class="card">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="card-title">Jiangsu University</h3>
+          <span class="timeline-date">2007 - 2011</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-card contact-card">
+      <div class="section-header">
+        <h2 class="section-title" data-translate="contactTitle">Let's Work Together</h2>
+        <p class="section-subtitle" data-translate="contactSubtitle">Looking for a senior QA engineer for your next warehouse automation project?</p>
+      </div>
+      <div class="flex flex-wrap gap-4">
+        <a class="contact-chip" href="mailto:xyh421@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span>xyh421@gmail.com</span>
+        </a>
+        <a class="contact-chip" href="https://www.linkedin.com/in/neo-xu-927607a0/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <div class="contact-chip">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Netherlands / EU projects</span>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-white text-center p-4 text-sm text-gray-500 border-t">
-    © 2025 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span>
+  <footer class="site-footer">
+    <p>&copy; 2026 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span></p>
   </footer>
 
   <script>
-    // 更新语言切换按钮文本
     function updateLanguageButton() {
       const button = document.querySelector('.lang-text');
-      button.textContent = currentLang.toUpperCase();
+      if (button) {
+        button.textContent = currentLang.toUpperCase();
+      }
     }
-    
-    // 在语言切换时更新按钮文本
+
     const originalToggleLanguage = toggleLanguage;
-    toggleLanguage = function() {
+    toggleLanguage = function () {
       originalToggleLanguage();
       updateLanguageButton();
     }
-    
-    // 初始化按钮文本
+
     document.addEventListener('DOMContentLoaded', () => {
       updateLanguageButton();
     });
   </script>
 </body>
 
-</html> 
+</html>
