@@ -10,6 +10,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <script src="translations.js"></script>
+
+  <script>
+    // Keep the merged HAI Robotics experience bilingual when translations are available.
+    (function () {
+      if (typeof translations === 'undefined') return;
+      const entries = {
+        en: {exp1Title: 'Senior QA Engineer / Software Implementation Engineer', exp1Date: 'Apr 2024 - Present | Shenzhen / Netherlands / European Projects', exp1Company: 'HAI Robotics'},
+        zh: {exp1Title: '高级测试工程师 / 软件实施工程师', exp1Date: '2024年4月 — 至今 | 深圳 / 荷兰 / 欧洲项目', exp1Company: '海柔创新（HAI Robotics）'},
+        'zh-CN': {exp1Title: '高级测试工程师 / 软件实施工程师', exp1Date: '2024年4月 — 至今 | 深圳 / 荷兰 / 欧洲项目', exp1Company: '海柔创新（HAI Robotics）'}
+      };
+      Object.keys(entries).forEach(function (lang) {
+        if (translations[lang]) Object.assign(translations[lang], entries[lang]);
+      });
+    })();
+  </script>
   <script src="language.js"></script>
 </head>
 
@@ -187,10 +202,10 @@
           <div class="timeline-marker"></div>
           <div class="card">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <h3 class="card-title" data-translate="exp1Title">Senior QA Engineer / Integration Test Engineer</h3>
-              <span class="timeline-date" data-translate="exp1Date">Mar 2025 - Present | Shenzhen / Netherlands</span>
+              <h3 class="card-title" data-translate="exp1Title">Senior QA Engineer / Software Implementation Engineer</h3>
+              <span class="timeline-date" data-translate="exp1Date">Apr 2024 - Present | Shenzhen / Netherlands / European Projects</span>
             </div>
-            <p class="text-slate-600 mt-2" data-translate="exp1Company">Europe Warehouse Automation Projects (Remote & On-site)</p>
+            <p class="text-slate-600 mt-2" data-translate="exp1Company">HAI Robotics</p>
             <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
               <li data-translate="exp1Li1">Led end-to-end integration testing for WMS / WES / ESS and robotic subsystems across European sites.</li>
               <li data-translate="exp1Li2">Supported robot fleets from ~200 to 1,800+ AMRs in robot-dense mega warehouses.</li>
@@ -199,23 +214,10 @@
               <li data-translate="exp1Li5">Performed on-site triage across robot control, task scheduling, and integration layers.</li>
               <li data-translate="exp1Li6">Applied LLMs (Claude, GPT) for automated test case generation, log pattern recognition, and defect root-cause analysis.</li>
               <li data-translate="exp1Li7">Currently based in Shenzhen — available for remote collaboration or EU on-site deployment (KM visa eligible).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="card">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <h3 class="card-title" data-translate="exp2Title">Senior QA Engineer | WMS Software Testing</h3>
-              <span class="timeline-date" data-translate="exp2Date">Apr 2024 - Feb 2025 | Shenzhen, China | On-site</span>
-            </div>
-            <p class="text-slate-600 mt-2" data-translate="exp2Company">Hai Robotics</p>
-            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
-              <li data-translate="exp2Li1">Delivered QA for standardized WMS platforms used in smart warehouse robotics.</li>
-              <li data-translate="exp2Li2">Built CI automation pipelines using Python + Jenkins, achieving 80%+ regression coverage.</li>
-              <li data-translate="exp2Li3">Validated inbound, outbound, replenishment, and robot integration flows.</li>
-              <li data-translate="exp2Li4">Explored AI-assisted testing workflows using LLMs for test script generation and code review.</li>
+              <li>Delivered QA for standardized WMS platforms used in smart warehouse robotics.</li>
+              <li>Built CI automation pipelines using Python + Jenkins, achieving 80%+ regression coverage.</li>
+              <li>Validated inbound, outbound, replenishment, and robot integration flows.</li>
+              <li>Explored AI-assisted testing workflows using LLMs for test script generation and code review.</li>
             </ul>
           </div>
         </div>
