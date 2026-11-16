@@ -202,7 +202,7 @@ const translations = {
     "exp7Li1": "使用 Python + UIAutomator 构建系统级与 HAL 测试框架。",
     "exp7Li2": "执行稳定性、性能和兼容性验证。",
     "educationTitle": "教育背景",
-    "educationDegree": "计算机科学学士（网络工程）",
+    "educationDegree": "计算机科学与技术(网络工程)",
     "educationSchool": "江苏大学",
     "contactTitle": "期待合作",
     "contactSubtitle": "寻找高级测试工程师？可接受远程、深圳现场或欧洲工作机会。",
