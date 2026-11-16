@@ -56,14 +56,24 @@
       entries.en.exp3Client = 'Project Client: Nike Greater China Headquarters';
       entries.zh.exp3Client = '项目客户：Nike 大中华区总部';
       entries['zh-CN'].exp3Client = '项目客户：Nike 大中华区总部';
-      entries.zh.exp1Li8 = '负责智能仓储机器人标准化 WMS 平台的测试与质量保障，覆盖核心业务流程。';
-      entries.zh.exp1Li9 = '基于 Python 与 Jenkins 搭建持续集成自动化测试流水线，实现 80% 以上的回归测试覆盖率。';
-      entries.zh.exp1Li10 = '验证入库、出库、补货及机器人系统集成流程，保障业务端到端稳定运行。';
-      entries.zh.exp1Li11 = '探索利用大语言模型辅助测试脚本生成与代码审查，提高测试设计和问题排查效率。';
-      entries['zh-CN'].exp1Li8 = entries.zh.exp1Li8;
-      entries['zh-CN'].exp1Li9 = entries.zh.exp1Li9;
-      entries['zh-CN'].exp1Li10 = entries.zh.exp1Li10;
-      entries['zh-CN'].exp1Li11 = entries.zh.exp1Li11;
+      entries.en.exp1Li1 = "Delivered integration testing, on-site validation, and go-live support for European warehouse automation projects including NEWWAVE, COOLBLUE, LPP, and SHEIN, covering WMS / WES / ESS and robotic subsystems.";
+      entries.en.exp1Li2 = "Tested warehouse automation deployments involving approximately 200 to 1,800+ robots, validating task scheduling, cross-system coordination, and stability in high-density operations.";
+      entries.en.exp1Li3 = "Built Python- and Jenkins-based CI test pipelines with 80%+ regression test coverage across inbound, outbound, replenishment, and robot integration workflows.";
+      entries.en.exp1Li4 = "Designed and executed UAT, volume testing, and high-concurrency stress tests to evaluate throughput and stability under production-scale order loads.";
+      entries.en.exp1Li5 = "Investigated on-site issues using system logs, API messages, and task execution traces, including robot control, task scheduling, and inventory data consistency.";
+      entries.en.exp1Li6 = "Used LLMs such as Claude and GPT to assist with test case and script generation, log analysis, code review, and defect root-cause investigation.";
+      entries.zh.exp1Li1 = "大型仓储自动化项目交付：参与 NEWWAVE、COOLBLUE、LPP、SHEIN 等欧洲物流自动化项目，负责 WMS / WES / ESS 与机器人子系统的集成测试、现场验证及上线支持。";
+      entries['zh-CN'].exp1Li1 = entries.zh.exp1Li1;
+      entries.zh.exp1Li2 = "大规模机器人系统测试：参与机器人规模约 200～1,800+ 台的仓储自动化项目，验证高密度作业环境下的任务调度、业务协同及系统稳定性。";
+      entries['zh-CN'].exp1Li2 = entries.zh.exp1Li2;
+      entries.zh.exp1Li3 = "自动化测试体系建设：基于 Python、Jenkins 搭建持续集成测试流水线，实现 80% 以上的回归测试覆盖率，覆盖入库、出库、补货及机器人集成流程。";
+      entries['zh-CN'].exp1Li3 = entries.zh.exp1Li3;
+      entries.zh.exp1Li4 = "性能与压力测试：设计并执行 UAT、业务量测试及高并发压力测试，验证生产规模订单下的系统吞吐能力和稳定性。";
+      entries['zh-CN'].exp1Li4 = entries.zh.exp1Li4;
+      entries.zh.exp1Li5 = "现场问题定位与解决：结合系统日志、接口报文及任务执行链路，分析机器人控制、任务调度、库存数据一致性等问题，支持现场故障排查。";
+      entries['zh-CN'].exp1Li5 = entries.zh.exp1Li5;
+      entries.zh.exp1Li6 = "AI 辅助测试：使用 Claude、GPT 等大语言模型辅助测试用例与脚本生成、日志分析、代码审查及缺陷根因定位，提高测试与问题分析效率。";
+      entries['zh-CN'].exp1Li6 = entries.zh.exp1Li6;
       Object.keys(entries).forEach(function (lang) {
         if (translations[lang]) Object.assign(translations[lang], entries[lang]);
       });
@@ -251,17 +261,12 @@
             </div>
             <p class="text-slate-600 mt-2" data-translate="exp1Company">HAI Robotics</p>
             <ul class="list-disc list-inside text-slate-700 space-y-2 mt-4">
-              <li data-translate="exp1Li1">Led end-to-end integration testing for WMS / WES / ESS and robotic subsystems across European sites.</li>
-              <li data-translate="exp1Li2">Supported robot fleets from ~200 to 1,800+ AMRs in robot-dense mega warehouses.</li>
-              <li data-translate="exp1Li3">Delivered go-live support for high-volume retail logistics projects (NEWWAVE, COOLBLUE, LPP, SHEIN).</li>
-              <li data-translate="exp1Li4">Executed UAT with production-scale orders and stress/volume testing for peak loads.</li>
-              <li data-translate="exp1Li5">Performed on-site triage across robot control, task scheduling, and integration layers.</li>
-              <li data-translate="exp1Li6">Applied LLMs (Claude, GPT) for automated test case generation, log pattern recognition, and defect root-cause analysis.</li>
-              <li data-translate="exp1Li7">Currently based in Shenzhen — available for remote collaboration or EU on-site deployment (KM visa eligible).</li>
-              <li data-translate="exp1Li8">Delivered QA for standardized WMS platforms used in smart warehouse robotics.</li>
-              <li data-translate="exp1Li9">Built CI automation pipelines using Python + Jenkins, achieving 80%+ regression coverage.</li>
-              <li data-translate="exp1Li10">Validated inbound, outbound, replenishment, and robot integration flows.</li>
-              <li data-translate="exp1Li11">Explored AI-assisted testing workflows using LLMs for test script generation and code review.</li>
+              <li data-translate="exp1Li1">Delivered integration testing, on-site validation, and go-live support for European warehouse automation projects including NEWWAVE, COOLBLUE, LPP, and SHEIN, covering WMS / WES / ESS and robotic subsystems.</li>
+              <li data-translate="exp1Li2">Tested warehouse automation deployments involving approximately 200 to 1,800+ robots, validating task scheduling, cross-system coordination, and stability in high-density operations.</li>
+              <li data-translate="exp1Li3">Built Python- and Jenkins-based CI test pipelines with 80%+ regression test coverage across inbound, outbound, replenishment, and robot integration workflows.</li>
+              <li data-translate="exp1Li4">Designed and executed UAT, volume testing, and high-concurrency stress tests to evaluate throughput and stability under production-scale order loads.</li>
+              <li data-translate="exp1Li5">Investigated on-site issues using system logs, API messages, and task execution traces, including robot control, task scheduling, and inventory data consistency.</li>
+              <li data-translate="exp1Li6">Used LLMs such as Claude and GPT to assist with test case and script generation, log analysis, code review, and defect root-cause investigation.</li>
             </ul>
           </div>
         </div>
