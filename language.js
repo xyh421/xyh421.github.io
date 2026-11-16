@@ -1,36 +1,27 @@
-// 获取当前语言，默认为英文
-let currentLang = localStorage.getItem('language') || 'en';
+// Bilingual resume language switcher.
+let currentLang;
+try { currentLang = localStorage.getItem('language') === 'zh' ? 'zh' : 'en'; }
+catch (_) { currentLang = 'en'; }
 
-// 更新页面内容
 function updateContent() {
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[currentLang][key]) {
-            element.textContent = translations[currentLang][key];
-        }
-    });
+  const dictionary = (typeof translations !== 'undefined' && translations[currentLang]) || {};
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
+      element.textContent = dictionary[key];
+    }
+  });
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+  const tooltip = document.querySelector('.tooltip-text');
+  if (tooltip) tooltip.textContent = currentLang === 'en' ? 'Switch to Chinese' : '切换到英文';
+  const button = document.querySelector('.lang-text');
+  if (button) button.textContent = currentLang.toUpperCase();
 }
 
-// 切换语言
 function toggleLanguage() {
-    currentLang = currentLang === 'en' ? 'zh' : 'en';
-    localStorage.setItem('language', currentLang);
-    updateContent();
-    
-    // 更新按钮提示文字
-    const tooltipText = document.querySelector('.tooltip-text');
-    if (tooltipText) {
-        tooltipText.textContent = currentLang === 'en' ? 'Switch to Chinese' : '切换到英文';
-    }
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  try { localStorage.setItem('language', currentLang); } catch (_) {}
+  updateContent();
 }
 
-// 页面加载时初始化
-document.addEventListener('DOMContentLoaded', () => {
-    updateContent();
-    
-    // 初始化按钮提示文字
-    const tooltipText = document.querySelector('.tooltip-text');
-    if (tooltipText) {
-        tooltipText.textContent = currentLang === 'en' ? 'Switch to Chinese' : '切换到英文';
-    }
-}); 
+document.addEventListener('DOMContentLoaded', updateContent);
