@@ -15,7 +15,7 @@ function updateContent() {
   const tooltip = document.querySelector('.tooltip-text');
   if (tooltip) tooltip.textContent = currentLang === 'en' ? 'Switch to Chinese' : '切换到英文';
   const button = document.querySelector('.lang-text');
-  if (button) button.textContent = currentLang.toUpperCase();
+  if (button) button.textContent = currentLang === 'en' ? 'CN' : 'EN';
 }
 
 function toggleLanguage() {
