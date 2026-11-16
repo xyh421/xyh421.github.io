@@ -92,7 +92,7 @@
         </nav>
         <div class="relative group">
           <button onclick="toggleLanguage()" class="lang-button">
-            <span class="lang-text">EN</span>
+            <span class="lang-text">CN</span>
           </button>
           <div class="lang-tooltip">
             <span class="tooltip-text">Switch to Chinese</span>
@@ -392,24 +392,6 @@
     <p>&copy; 2026 Neo Xu. <span data-translate="allRightsReserved">All rights reserved.</span></p>
   </footer>
 
-  <script>
-    function updateLanguageButton() {
-      const button = document.querySelector('.lang-text');
-      if (button) {
-        button.textContent = currentLang.toUpperCase();
-      }
-    }
-
-    const originalToggleLanguage = toggleLanguage;
-    toggleLanguage = function () {
-      originalToggleLanguage();
-      updateLanguageButton();
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      updateLanguageButton();
-    });
-  </script>
 </body>
 
 </html>
