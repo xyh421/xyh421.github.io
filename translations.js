@@ -79,7 +79,7 @@ const translations = {
     "exp5Li3": "Introduced regression pipelines across multiple business lines.",
     "exp6Title": "Software Test Engineer",
     "exp6Date": "Nov 2014 - Dec 2016 | Shanghai, China",
-    "exp6Company": "Ctrip",
+    "exp6Company": "Trip.com Group (Ctrip)",
     "exp6Project": "Visa Modules (Web & Mobile)",
     "exp6Li1": "Tested web and mobile modules with cross-browser and backend validation.",
     "exp6Li2": "Built mobile automation with Appium, reducing manual regression by ~50%.",
