@@ -191,7 +191,7 @@ const translations = {
     "exp4Li3": "交付 ETL 和报表，支持产品决策。",
     "exp5Title": "测试主管 / 自动化工程师",
     "exp5Date": "2016年12月 — 2019年7月 | 中国上海",
-    "exp5Company": "上海智望信息科技",
+    "exp5Company": "上海指旺信息科技",
     "exp5Project": "P2P 金融系统",
     "exp5Li1": "负责消费金融系统（ERP、授信、支付、催收）的端到端测试。",
     "exp5Li2": "使用 Robot Framework 实现 UI 和 API 自动化，效率提升约60%。",
