@@ -103,7 +103,11 @@ const translations = {
     "contactTitle": "Let's Work Together",
     "contactSubtitle": "Looking for a senior QA engineer? Available for remote work, Shenzhen on-site, or EU relocation.",
     "contactLocation": "Shenzhen, China | Remote & EU Available",
-    "allRightsReserved": "All rights reserved."
+    "allRightsReserved": "All rights reserved.",
+    "exp1Li8": "Delivered QA for standardized WMS platforms used in smart warehouse robotics.",
+    "exp1Li9": "Built CI automation pipelines using Python + Jenkins, achieving 80%+ regression coverage.",
+    "exp1Li10": "Validated inbound, outbound, replenishment, and robot integration flows.",
+    "exp1Li11": "Explored AI-assisted testing workflows using LLMs for test script generation and code review."
   },
   "zh": {
     "headerRole": "高级测试工程师 / 集成测试工程师",
@@ -215,6 +219,10 @@ const translations = {
     "contactTitle": "期待合作",
     "contactSubtitle": "寻找高级测试工程师？可接受远程、深圳现场或欧洲工作机会。",
     "contactLocation": "中国深圳 | 可远程及欧洲工作",
-    "allRightsReserved": "保留所有权利。"
+    "allRightsReserved": "保留所有权利。",
+    "exp1Li8": "负责智能仓储机器人标准化 WMS 平台的测试与质量保障，覆盖核心业务流程。",
+    "exp1Li9": "基于 Python 与 Jenkins 搭建持续集成自动化测试流水线，实现 80% 以上的回归测试覆盖率。",
+    "exp1Li10": "验证入库、出库、补货及机器人系统集成流程，保障业务端到端稳定运行。",
+    "exp1Li11": "探索利用大语言模型辅助测试脚本生成与代码审查，提高测试设计和问题排查效率。"
   }
 };
